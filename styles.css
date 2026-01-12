@@ -1,0 +1,52 @@
+:root {
+  --color-first: #000000;
+  --color-second: #202020;
+  --color-thrid: #404040;
+  --color-fourth: #95ff8d;
+  --color-fifth: #aaaaaa;
+  --color-sixth: #fff;
+}
+
+/* Base */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Buttons */
+
+.btn-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-fourth);
+  width: 113px;
+  height: 36px;
+  border-radius: 24px;
+
+  color: var(--color-first);
+  text-decoration: none;
+}
+
+.btn-black {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-fourth);
+
+  background-color: var(--color-thrid);
+  width: 151px;
+  height: 36px;
+  border-radius: 24px;
+}
+
+/* Home section */
+
+.base {
+  background-color: var(--color-thrid);
+  border-radius: 8px;
+
+  color: var(--color-sixth);
+}
