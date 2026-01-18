@@ -38,12 +38,17 @@
 :root {
   --color-first: #000000;
   --color-second: #202020;
+  --color-transparent: #1d1d1de7;
   --color-thrid: #404040;
   --color-fourth: #95ff8d;
   --color-fifth: #aaaaaa;
   --color-sixth: #fff;
   --color-seventh: #64c25d;
   --color-eighth: #356831;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* Base */
@@ -53,9 +58,9 @@ body {
   font-size: 14px;
   color: var(--color-sixth);
 
-  background-color: #000000;
-
   line-height: 1.5;
+
+  margin: 0;
 }
 
 .uppercase {
@@ -66,16 +71,52 @@ body {
   font-family: "Righteous", sans-serif;
   font-size: 120px;
   text-transform: capitalize;
+  margin-bottom: 0;
+
+  line-height: 1;
 }
 
+/* .section {
+
+} */
+
 /* Header */
+
+header {
+  background-color: lightblue;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background: transparent;
+  z-index: 10;
+}
 
 nav {
   color: var(--color-sixth);
   font-size: 26px;
   font-family: "Righteous", sans-serif;
 
-  text-decoration: none;
+  padding: 30px;
+
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.nav-container {
+  max-width: 722px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.right {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
 }
 
 .nav-link,
@@ -89,11 +130,11 @@ nav {
   color: var(--color-sixth);
 }
 
-/* underline без прыжков */
 .nav-link {
   display: inline-block;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.3s;
+  transition: 0.3s;
+  line-height: 1.1;
 }
 
 .nav-link:hover {
@@ -147,13 +188,144 @@ nav {
   background-color: var(--color-first);
 }
 
-/* Home section */
+/* Home-hero section */
+
+.home-hero-section {
+  background-image: url(../images/home-hero-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  position: relative;
+
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  min-height: 750px;
+  padding-bottom: 40px;
+}
 
 .base {
-  background-color: var(--color-thrid);
+  font-family: "Roboto Mono", monospace;
+
+  background-color: var(--color-transparent);
   border-radius: 8px;
 
+  width: 610px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 16px;
+
   color: var(--color-sixth);
+}
+
+.base-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.base dl,
+dt,
+dd {
+  margin: 0;
+}
+
+/* Stride-section */
+
+.stride-section {
+  background-image: url(../images/stride-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  padding: 140px 0;
+}
+
+.stride-title {
+  margin: 0;
+}
+
+.stride-content {
+  background-color: var(--color-transparent);
+  margin: 0 auto;
+  padding: 32px 16px;
+
+  text-align: center;
+}
+
+.stribe-text {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+/* Duo-section */
+
+.duo-section {
+  display: flex;
+}
+
+.duo-left,
+.duo-right {
+  flex: 1;
+  height: 800px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  min-width: 0;
+}
+
+.duo-right {
+  background-color: var(--color-second);
+}
+
+.duo-right p {
+  color: var(--color-fifth);
+  margin: 30px 0;
+}
+
+.duo-left {
+  background-image: url(../images/left.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.duo-left p {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+/* Mission-section  */
+
+.mission-section {
+  background-color: var(--color-fourth);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+
+  gap: 477px;
+}
+
+.mission-section p {
+  margin: 0;
+}
+
+.mission-text {
+  color: var(--color-first);
+  font-size: 48px;
+  font-weight: 600;
 }
 
 /* Footer */
@@ -167,4 +339,170 @@ nav {
 
 .address-link:hover {
   color: var(--color-fourth);
+}
+
+/* --------------------------------------------------------- ABOUT PAGE --------------------------------------------------------- */
+
+/* Base */
+
+/* Header */
+
+.about-nav {
+  color: var(--color-sixth);
+  font-size: 26px;
+  font-family: "Righteous", sans-serif;
+
+  padding: 30px;
+
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.about-nav-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+/* hero-section */
+
+.about-hero-section {
+  background-image: url(../images/about-hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  position: relative;
+
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  min-height: 750px;
+}
+
+/* Misiion section */
+
+.about-mission-section {
+  background-color: var(--color-first);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 20px;
+
+  gap: 210px;
+}
+
+.about-mission-section p {
+  margin: 0;
+}
+
+.about-mission-text {
+  color: var(--color-sixth);
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.list-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.mission-list {
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+}
+
+.list-text {
+  margin: 0;
+  padding: 0;
+  list-style: disc;
+
+  flex-basis: 300px;
+}
+
+/* Upcoming-event section */
+
+.ue-section {
+  background-color: var(--color-fourth);
+
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 110px 300px;
+}
+
+.ue-title {
+  color: var(--color-first);
+  font-size: 100px;
+}
+
+.ue-text {
+  color: var(--color-first);
+  font-size: 18px;
+}
+
+/* --------------------------------------------------------- EVENT PAGE --------------------------------------------------------- */
+
+/* Header */
+
+/* event-hero-section */
+
+.event-hero-section {
+  background-image: url(../images/stride-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  position: relative;
+
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.hero-title {
+  margin-top: 360px;
+  margin-bottom: 360px;
+}
+
+/* Schedule-section */
+
+.schedule-section {
+  background-color: var(--color-first);
+
+  display: flex;
+  justify-content: center;
+
+  padding: 100px;
+}
+
+.event-base {
+  background-color: transparent;
+  padding: 0;
+}
+
+.event-list-title {
+  margin-bottom: 0;
+}
+
+.event-points {
+  font-size: 12px;
+  margin: 0;
+  padding-left: 14px;
+}
+
+.event-container {
+  max-width: 756px;
+}
+
+.event-btn {
+  margin-top: 50px;
 }

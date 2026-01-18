@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,74 +6,101 @@
     <title>Group Event</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
+  <body class="home-page">
     <header>
-      <nav>
-        <div class="nav-left">
-          <a href="" class="nav-link">Home</a>
-        </div>
-        <div class="nav-logo">
-          <img src="./images/Running for Change.svg" alt="logo" />
-        </div>
-        <div class="nav-right">
-          <a href="" class="nav-link">About Us</a>
-          <a href="" class="nav-link">Events</a>
-        </div>
-      </nav>
+      <div class="nav-container">
+        <nav>
+          <div class="nav-left">
+            <a href="./index.html" class="nav-link">Home</a>
+          </div>
+          <div class="nav-logo">
+            <a href="./index.html">
+              <img src="./images/Running for Change.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="nav-right">
+            <ul class="right">
+              <li><a href="./about.html" class="nav-link">About Us</a></li>
+              <li><a href="./events.html" class="nav-link">Events</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
-      <section class="home">
+      <section class="home-hero-section section">
         <div class="container">
-          <div class="base">
-            <dl>
-              <dt>Location:</dt>
-              <dd>Green Bay Trail, Glencoe, IL</dd>
-            </dl>
-            <dl>
-              <dt>Date</dt>
-              <dd>May 12, 2025</dd>
-            </dl>
-            <dl>
-              <dt>Time</dt>
-              <dd>6AM - NOON</dd>
-            </dl>
+          <div class="base-container">
+            <div class="base">
+              <dl>
+                <dt>Location:</dt>
+                <dd>Green Bay Trail, Glencoe, IL</dd>
+              </dl>
+              <dl>
+                <dt>Date</dt>
+                <dd>May 12, 2025</dd>
+              </dl>
+              <dl>
+                <dt>Time</dt>
+                <dd>6AM - NOON</dd>
+              </dl>
+            </div>
+            <a href="event.html" class="btn-green uppercase btn">register</a>
           </div>
-          <a href="event.html" class="btn-green uppercase btn">register</a>
         </div>
       </section>
-      <section class="stride">
-        <div>
-          <h2 class="section-title">Stride together, shape tomorrow.</h2>
-          <p>
-            Ditch the gridlock and embrace the open road. Run, donate, or bring
-            the vibe as we create pathways for a healthier, more connected
-            community, one step at a time.
-          </p>
-          <a href="https://figma.com/sites" class="btn-black uppercase"
+      <section class="stride-section section">
+        <div class="stride-content">
+          <h2 class="section-title stride-title">
+            Stride together, shape tomorrow.
+          </h2>
+          <div class="stribe-text">
+            <p>
+              Ditch the gridlock and embrace the open road. Run, donate, or
+              bring the vibe as we create pathways for a healthier, more
+              connected community, one step at a time.
+            </p>
+          </div>
+          <a
+            href="https://figma.com/sites"
+            class="btn-black uppercase"
+            target="_blank"
             >newsletter</a
           >
         </div>
       </section>
-      <section class="duo">
-        <article>
-          <h2 class="section-title">30k raised</h2>
+      <section class="duo-section section">
+        <article class="duo-left">
+          <h2 class="section-title duo-title">
+            30k <br />
+            raised
+          </h2>
           <p>By North Shore residents</p>
           <a href="About.html" class="btn-green uppercase btn">about us</a>
         </article>
-        <article>
-          <h2 class="section-title">Don’t Miss a Step</h2>
+        <article class="duo-right">
+          <h2 class="section-title duo-title">
+            Don’t <br />
+            Miss a <br />
+            Step
+          </h2>
           <p>Get the latest updates and details about the event.</p>
-          <a href="https://figma.com/sites" class="btn-black uppercase btn"
+          <a
+            href="https://figma.com/sites"
+            class="btn-black uppercase btn"
+            target="_blank"
             >newsletter</a
           >
         </article>
       </section>
-      <section class="mission">
-        <p>
-          Our mission is to improve suburban quality of life by reducing car
-          dependency and promoting active transportation.
-        </p>
-
+      <section class="mission-section section">
+        <div class="mission-text">
+          <p>
+            Our mission is to improve suburban quality of life by <br />
+            reducing car dependency and promoting active <br />
+            transportation.
+          </p>
+        </div>
         <a href="event.html" class="btn-black uppercase btn">register</a>
       </section>
       <footer>
